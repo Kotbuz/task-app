@@ -3,25 +3,3 @@
 <h1>Пример маршрутизатора Cisco</h1>
 
 <router-outlet></router-outlet>
-
-
-
-
-<div>
-  <h2>Список задач</h2>
-  <div>
-    <input type="text" [(ngModel)]="newTaskTitle" placeholder="Введите текст задачи...">
-  </div>
-  <button (click)="addNewTask()">Добавить</button>
-  <ul>
-    @for (t of tasks; track t.id) {
-    <li>
-      <input type="checkbox" [checked]="t.completed" (change)="changeTaskStatus(t.id)">
-      <span [style.text-decoration]="t.completed ? 'line-through' : 'none'">{{t.title}}</span>
-      <button (click)="removeTask(t.id)">&times;</button>
-    </li>
-    } @empty {
-    <p>Бездельник</p>
-    }
-  </ul>
-</div>

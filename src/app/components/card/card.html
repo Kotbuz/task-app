@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-image-wrapper">
+        <!-- Фото товара -->
+        <img src="{{ image }}" alt="{{ title }}">
+
+        <!-- Сердечко (избранное) -->
+        <button class="favorite-btn">♡</button>
+
+        <!-- Бейдж скидки -->
+        @if (discount > 0) {
+        <div class="badge-discount">
+            -{{ discount }}%
+        </div>
+        }
+    </div>
+
+    <div class="card-info">
+        <!-- Блок с ценой -->
+        <div class="price-block">
+            <h2 class="current-price">{{ price }} ₽</h2>
+        </div>
+
+        <!-- Название товара -->
+        <h3 class="title">{{ title }}</h3>
+
+        <!-- Описание товара -->
+        <p class="desc">{{ desc }}</p>
+
+        <!-- Кнопка -->
+        <div class="card-action">
+            <button class="cart-btn" (click)="onCartClick()">
+                🛒 <span>В корзину</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+/* Контейнер для всего контента */
+.main-content {
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Центрируем контент на странице */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Заголовок страницы */
+.main-content h2 {
+    color: #1b4332;
+    /* Темно-зеленый, в тон карточкам */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e9f0eb;
+    /* Легкая линия под заголовком */
+}
+
+/* Сетка для карточек */
+.cards-container {
+    display: grid;
+    /* Автоматически подстраивает количество колонок. 
+       Минимальная ширина карточки 240px, максимальная - 1fr (остаток места) */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    /* Отступ между карточками */
+    align-items: start;
+    /* Выравнивание по верхнему краю */
+}
+
+/* Стили для пустого каталога */
+.cards-container p {
+    grid-column: 1 / -1;
+    /* Растягиваем сообщение на всю ширину сетки */
+    text-align: center;
+    color: #6b7f72;
+    font-size: 16px;
+    padding: 40px;
+    background-color: #f4f7f5;
+    border-radius: 12px;
+}

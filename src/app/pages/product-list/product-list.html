@@ -1,1 +1,15 @@
-<p>product-list works!</p>
+<main class="main-content">
+    <h2>Список карточек</h2>
+    <div class="cards-container">
+        @for (product of products; track product.id) {
+
+        <app-card [title]="product.title" [desc]="product.desc" [category]="product.category" [price]="product.price"
+            [discount]="product.discount" [quantity]="product.quantity"
+            (cardToCart)="addProductToCart(product.id)"></app-card>
+
+        }@empty {
+        <p>Каталог пуст</p>
+        }
+    </div>
+</main>
+

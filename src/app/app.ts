@@ -3,9 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TaskInterface, Task } from './services/task';
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
-  imports: [RouterOutlet, FormsModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, CommonModule, Navbar],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -13,8 +14,6 @@ import { TaskInterface, Task } from './services/task';
 export class App {
   tasks: TaskInterface[] = [];
   newTaskTitle: string = '';
-
-
   constructor(private taskService: Task) {
     this.loadTasks();
   }
@@ -35,7 +34,6 @@ export class App {
   changeTaskStatus(id: number): void {
     this.taskService.changeTask(id);
     this.loadTasks();
-
   }
 
 }

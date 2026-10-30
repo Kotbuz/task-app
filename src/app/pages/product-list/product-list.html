@@ -1,7 +1,13 @@
 <main class="main-content">
-    <h2>Список карточек</h2>
+    <div class="top">
+        <h2>Список карточек</h2>
+        <div class="search-container">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Поиск товаров по названию..."
+                class="search-input" />
+        </div>
+    </div>
     <div class="cards-container">
-        @for (product of products; track product.id) {
+        @for (product of filteredProducts; track product.id) {
 
         <app-card [title]="product.title" [desc]="product.desc" [category]="product.category" [price]="product.price"
             [discount]="product.discount" [quantity]="product.quantity"
@@ -12,4 +18,3 @@
         }
     </div>
 </main>
-

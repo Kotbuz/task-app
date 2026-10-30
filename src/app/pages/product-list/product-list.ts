@@ -12,11 +12,16 @@ import { Card } from '../../components/card/card';
   templateUrl: './product-list.html',
 })
 export class ProductList {
-
+  searchQuery: string = ''
 
   products: ProductInterface[] = [];
   constructor(private productService: Product) {
     this.loadProducts();
+  }
+  get filteredProducts(): ProductInterface[] {
+    return this.products.filter(product =>
+      product.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
   }
   loadProducts(): void {
     this.products = this.productService.getProducts();

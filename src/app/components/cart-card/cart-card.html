@@ -1,0 +1,21 @@
+<div class="card cart">
+    <div class="card-image-wrapper">
+        <img src="{{ image }}" alt="{{ title }}">
+    </div>
+
+    <div class="card-info">
+        <h3 class="title">{{ title }}</h3>
+        <div class="price-block">
+            <h2 class="current-price">{{ price }} ₽</h2>
+        </div>
+        <div class="card-action">
+            <!-- Мб потом сделаю -->
+            <!-- <div class="quantity-controls"> 
+                <button class="qty-btn">-</button>
+                <span class="qty-count">1</span>
+                <button class="qty-btn">+</button>
+            </div> -->
+            <button class="delete-btn" (click)="onRemoveClick()" title="Удалить">🗑️</button>
+        </div>
+    </div>
+</div>

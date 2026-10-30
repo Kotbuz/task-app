@@ -1,6 +1,8 @@
-<nav>
-    <a routerLink="/">Главная</a>
-    <a routerLink="/tasks">Задачи</a>
-    <a routerLink="/catalog">Каталог</a>
-    <a routerLink="/cart">Корзина</a>
+<nav class="navbar">
+    <div class="nav-container">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Главная</a>
+        <a routerLink="/tasks" routerLinkActive="active">Задачи</a>
+        <a routerLink="/catalog" routerLinkActive="active">Каталог</a>
+        <a routerLink="/cart" routerLinkActive="active">Корзина</a>
+    </div>
 </nav>

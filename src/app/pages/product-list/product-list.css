@@ -1,44 +1,85 @@
-/* Контейнер для всего контента */
 .main-content {
     padding: 32px 24px;
     max-width: 1400px;
     margin: 0 auto;
-    /* Центрируем контент на странице */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Заголовок страницы */
-.main-content h2 {
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e9f0eb;
+}
+
+
+.top h2 {
     color: #1b4332;
-    /* Темно-зеленый, в тон карточкам */
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #e9f0eb;
-    /* Легкая линия под заголовком */
+    margin: 0;
 }
 
-/* Сетка для карточек */
+.top .search-container {
+    width: 100%;
+    max-width: 320px;
+}
+
+.top .search-input {
+    width: 100%;
+    padding: 8px 14px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.top .search-input:focus {
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+}
+
+
 .cards-container {
     display: grid;
-    /* Автоматически подстраивает количество колонок. 
-       Минимальная ширина карточки 240px, максимальная - 1fr (остаток места) */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 24px;
-    /* Отступ между карточками */
     align-items: start;
-    /* Выравнивание по верхнему краю */
 }
 
-/* Стили для пустого каталога */
 .cards-container p {
     grid-column: 1 / -1;
-    /* Растягиваем сообщение на всю ширину сетки */
     text-align: center;
     color: #6b7f72;
     font-size: 16px;
     padding: 40px;
     background-color: #f4f7f5;
     border-radius: 12px;
+}
+
+
+.search-container {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 16px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
 }

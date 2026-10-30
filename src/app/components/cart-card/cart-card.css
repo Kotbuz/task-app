@@ -1,0 +1,106 @@
+.card.cart {
+    width: 100%;
+    max-width: 80%;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid #2d6a4f;
+    padding: 12px;
+    gap: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 20px rgba(0, 50, 20, 0.08);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card.cart:hover {
+    box-shadow: 0 8px 24px rgba(0, 50, 20, 0.15);
+}
+
+.card.cart .card-image-wrapper {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card.cart .card-info {
+    flex-grow: 1;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+.card.cart .title {
+    max-width: 200px;
+    -webkit-line-clamp: 2;
+}
+
+
+.card.cart .price-block {
+    margin-bottom: 0;
+    min-width: 80px;
+}
+
+
+.card.cart .card-action {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* .quantity-controls {
+    display: flex;
+    align-items: center;
+    background-color: #f4f7f5;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d6a4f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+} */
+
+.qty-btn:hover {
+    background-color: #e2e9e5;
+}
+
+.qty-count {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1b4332;
+    min-width: 24px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #d34b41;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #b97b77;
+}

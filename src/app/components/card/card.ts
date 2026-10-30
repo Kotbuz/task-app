@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, output, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 })
 export class Card {
 
-  @Input() title: string = 'Кличка питомц';
+  @Input() title: string = 'Название товара';
   @Input() category: string = 'Категория';
   @Input() price: number = 0;
   @Input() desc: string = 'Описание';
